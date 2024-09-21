@@ -339,6 +339,9 @@
 #  - https://github.com/ollama/ollama/blob/main/docs/openai.md
 - platform: ollama
   models:
+    - name: qwen2.5
+      max_input_tokens: 128000
+      supports_function_calling: true
     - name: llama3.1
       max_input_tokens: 128000
       supports_function_calling: true
@@ -355,6 +358,9 @@
     - name: phi3
       max_input_tokens: 128000
       supports_function_calling: true
+    - name: shaw/dmeta-embedding-zh
+      type: embedding
+      max_tokens_per_chunk: 512
     - name: nomic-embed-text
       type: embedding
       max_tokens_per_chunk: 8192
@@ -760,6 +766,11 @@
       max_input_tokens: 128000
       input_price: 14
       output_price: 14
+      supports_function_calling: true
+    - name: glm-4-air
+      max_input_tokens: 128000
+      input_price: 0.14
+      output_price: 0.14
       supports_function_calling: true
     - name: glm-4-long
       max_input_tokens: 1000000
